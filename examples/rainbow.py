@@ -15,7 +15,7 @@ edit this example and  change 'unicorn.AUTO' to 'unicorn.HAT' below.
 
 unicorn.set_layout(unicorn.AUTO)
 unicorn.rotation(0)
-unicorn.brightness(0.5)
+unicorn.brightness(0.25)
 width,height=unicorn.get_shape()
 
 
