@@ -30,7 +30,7 @@ offset = 30
 while True:
         i = i + 0.3
         for y in range(height):
-                for x in range(width/2):
+                for x in range(4):
                         r = (math.cos((x+i)/2.0) + math.cos((y+i)/2.0)) * 64.0 + 128.0
                         g = (math.sin((x+i)/1.5) + math.sin((y+i)/2.0)) * 64.0 + 128.0
                         b = (math.sin((x+i)/2.0) + math.cos((y+i)/1.5)) * 64.0 + 128.0
