@@ -17,19 +17,17 @@ def dcounter(totaldots):
         else:
             dots = totaldots
         for y in range(4):
-            print(dots)
             if (y < dots):
                 uh.set_pixel(x,y, 3, 130, 255)
             else:
                 uh.set_pixel(x,y, 0, 0, 0)
-    uh.show()
     totaldots -= dots
-
+    uh.show()
 
 while (t):
     mins, secs = divmod(t, 60)
     timeformat = '{:02d}:{:02d}'.format(mins, secs)
-    #print(timeformat, end='\r')
+    print(timeformat, end='\r')
     dcounter(t//15)
     time.sleep(1)
     t -= 1
