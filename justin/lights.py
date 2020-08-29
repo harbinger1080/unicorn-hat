@@ -9,6 +9,7 @@ uh.brightness(0.25)
 
 t = (int(input("How many minutes? "))*60)
 i=0
+
 def dcounter(totaldots):
     width = (math.ceil(totaldots/4))
     for x in range(width):
@@ -24,5 +25,6 @@ while (t):
     mins, secs = divmod(t, 60)
     timeformat = '{:02d}:{:02d}'.format(mins, secs)
     print(timeformat, end='\r')
+    dcounter(t)
     time.sleep(1)
     t -= 1
