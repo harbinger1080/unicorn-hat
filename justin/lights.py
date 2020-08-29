@@ -14,13 +14,14 @@ def set_pixel_hsv(x, y, h, s, v):
     r, g, b = [int(x*255) for x in col.hsv_to_rgb(h, s, v)]
     uh.set_pixel(x,y,r,g,b)
 
+mins, secs = divmod(t, 60)
+timeformat = '{:02d}:{:02d}'.format(mins, secs)
 
 while (t):
-    mins, secs = divmod(t, 60)
-    timeformat = '{02d}:{:02d}'.format(mins, secs)
     print(timeformat, end='\r\n')
     time.sleep(1)
     t -= 1
+
     for y in range(height):
         for x in range(2):
             #print("x{}, y{}".format(x,y))
