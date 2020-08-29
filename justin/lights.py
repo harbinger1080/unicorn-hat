@@ -8,7 +8,7 @@ uh.rotation(0)
 uh.brightness(0.25)
 width,height=uh.get_shape()
 
-t = 1
+t = 65
 
 def set_pixel_hsv(x, y, h, s, v):
     r, g, b = [int(x*255) for x in col.hsv_to_rgb(h, s, v)]
@@ -21,7 +21,6 @@ while (t):
     print(timeformat, end='\r\n')
     time.sleep(1)
     t -= 1
-
     for y in range(height):
         for x in range(2):
             #print("x{}, y{}".format(x,y))
