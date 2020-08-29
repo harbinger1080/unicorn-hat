@@ -7,7 +7,7 @@ uh.set_layout(uh.AUTO)
 uh.rotation(0)
 uh.brightness(0.25)
 
-t = int(input("How many minutes?"))
+t = (int(input("How many minutes? "))*60)
 i=0
 def dcounter(totaldots):
     width = (math.ceil(totaldots/4))
