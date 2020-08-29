@@ -4,7 +4,7 @@ import unicornhat as uh
 
 uh.set_layout(uh.AUTO)
 uh.rotation(0)
-uh.brightness(0.25)
+uh.brightness(0.1)
 width,height=uh.get_shape()
 
 def set_pixel_hsv(x, y, h, s, v):
@@ -13,4 +13,7 @@ def set_pixel_hsv(x, y, h, s, v):
 
 for y in range(height):
     for x in range(width):
-        print((1.0/8) * x)
+        #print((1.0/8) * x)
+        set_pixel_hsv(x,y,(1.0/8)*x,(1.0/8)*y,1.0)
+
+uh.show()
