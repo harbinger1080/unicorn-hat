@@ -13,8 +13,9 @@ t = 90
 while (t):
     dots = (t * 60) % 225
     mins, secs = divmod(t, 60)
+
     timeformat = '{:02d}:{:02d}'.format(mins, secs)
-    print(timeformat, end='\r\n')
+    print(timeformat, end='\r')
 
     for dot in range(dots):
         for y in range(height):
