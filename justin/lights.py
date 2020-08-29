@@ -19,8 +19,8 @@ def dcounter(totaldots):
         for y in range(dots):
             print(dots)
             uh.set_pixel(x,y, 3, 130, 255)
-            uh.show()
-        totaldots -= dots
+    uh.show()
+    totaldots -= dots
 
 
 while (t):
