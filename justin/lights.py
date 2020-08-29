@@ -8,16 +8,15 @@ uh.rotation(0)
 uh.brightness(0.25)
 width,height=uh.get_shape()
 
-t = 65
+t = 15
 
 def set_pixel_hsv(x, y, h, s, v):
     r, g, b = [int(x*255) for x in col.hsv_to_rgb(h, s, v)]
     uh.set_pixel(x,y,r,g,b)
 
-mins, secs = divmod(t, 60)
-timeformat = '{:02d}:{:02d}'.format(mins, secs)
-
 while (t):
+    mins, secs = divmod(t, 60)
+    timeformat = '{:02d}:{:02d}'.format(mins, secs)
     print(timeformat, end='\r')
     time.sleep(1)
     t -= 1
