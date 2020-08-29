@@ -13,7 +13,7 @@ def set_pixel_hsv(x, y, h, s, v):
 
 while True:
     for y in range(height):
-        for x in range(width):
+        for x in range(2):
             #print("x{}, y{}".format(x,y))
-            set_pixel_hsv(x,y,(1.0/8)*x,(1.0/4)*y,1.0)
+            uh.set_pixel(x,y,3, 130, 255)
             uh.show()
