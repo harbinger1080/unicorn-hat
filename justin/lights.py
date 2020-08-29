@@ -19,7 +19,7 @@ while (t):
     print(columns)
     mins, secs = divmod(t, 60)
     timeformat = '{:02d}:{:02d}'.format(mins, secs)
-    print(timeformat, end='\r')
+    print(timeformat, end='\r\n')
 
     for y in range(height):
         for x in range(columns):
