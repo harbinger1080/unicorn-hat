@@ -11,15 +11,15 @@ columns = 0
 t = 90
 
 while (t):
-    ccount = t % 15
-    print(ccount)
+    dots = (t * 60) % 225
     mins, secs = divmod(t, 60)
     timeformat = '{:02d}:{:02d}'.format(mins, secs)
     print(timeformat, end='\r\n')
 
-    for y in range(height):
-        for x in range(columns):
-            uh.set_pixel(x,y,3, 130, 255)
-            uh.show()
-    time.sleep(1)
-    t -= 1
+    for dot in range(dots)
+        for y in range(height):
+            for x in range(columns):
+                uh.set_pixel(x,y,3, 130, 255)
+                uh.show()
+        time.sleep(1)
+        t -= 1
