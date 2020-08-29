@@ -13,4 +13,4 @@ def set_pixel_hsv(x, y, h, s, v):
 
 for y in range(height):
     for x in range(width):
-        print((1.0/x))
+        print((1.0/8) * x)
