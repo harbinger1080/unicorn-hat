@@ -24,4 +24,4 @@ while (t):
             uh.set_pixel(x,y,3, 130, 255)
             uh.show()
         time.sleep(1)
-        t -= 1
+    t -= 1
