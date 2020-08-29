@@ -13,12 +13,13 @@ i=0
 def dcounter(totaldots):
     width = (math.ceil(totaldots/4))
     for x in range(width):
-        y = (totaldots - x * 4)
-        if (y > 4):
-            y = 4
-        print(x, y, end="\n")
-        #uh.set_pixel(x,i,3, 130, 255)
-        #uh.show()
+        dots = (totaldots - x * 4)
+        if (dots > 4):
+            dots = 4
+        for y in range(dots):
+            #print(x, y, end="\n")
+            uh.set_pixel(x,y,3, 130, 255)
+            uh.show()
 
 
 while (t):
