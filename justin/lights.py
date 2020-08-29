@@ -1,7 +1,6 @@
 import colorsys as col
 import unicornhat as uh
 import time
-#print(col.hsv_to_rgb(1.0,1.0,1.0))
 
 uh.set_layout(uh.AUTO)
 uh.rotation(0)
@@ -20,8 +19,11 @@ while (t):
     print(timeformat, end='\r')
     time.sleep(1)
     t -= 1
+
+    columns = t % 15
+
+
     for y in range(height):
-        for x in range(2):
-            #print("x{}, y{}".format(x,y))
+        for x in range(columns):
             uh.set_pixel(x,y,3, 130, 255)
             uh.show()
