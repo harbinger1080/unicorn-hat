@@ -16,7 +16,7 @@ while (t):
     timeformat = '{:02d}:{:02d}'.format(mins, secs)
     print(timeformat, end='\r\n')
 
-    for dot in range(dots)
+    for dot in range(dots):
         for y in range(height):
             for x in range(columns):
                 uh.set_pixel(x,y,3, 130, 255)
