@@ -11,9 +11,9 @@ t = (int(input("How many minutes? "))*60)
 i=0
 
 def dcounter(totaldots):
-    width = (math.ceil(totaldots/4))
+    width = math.ceil(totaldots/4)
     for x in range(width):
-        dots = (totaldots - x * 4)
+        dots = math.ceil(totaldots - x * 4)
         if (dots > 4):
             dots = 4
         for y in range(dots):
