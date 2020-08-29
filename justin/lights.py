@@ -11,11 +11,14 @@ t = (int(input("How many minutes? "))*60)
 i=0
 
 def dcounter(totaldots):
+    print(totaldots)
     width = math.ceil(totaldots/4)
+    print(width)
     for x in range(width):
         dots = math.ceil(totaldots - x * 4)
         if (dots > 4):
             dots = 4
+        print(dots)
         for y in range(dots):
             print(x, y, end="\n")
             uh.set_pixel(x,y,3, 130, 255)
@@ -25,7 +28,7 @@ def dcounter(totaldots):
 while (t):
     mins, secs = divmod(t, 60)
     timeformat = '{:02d}:{:02d}'.format(mins, secs)
-    print(timeformat, end='\r')
+    #print(timeformat, end='\r')
     dcounter(mins//3.75)
     time.sleep(1)
     t -= 1
