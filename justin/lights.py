@@ -8,15 +8,11 @@ uh.brightness(0.25)
 width,height=uh.get_shape()
 
 columns = 0
-t = 15
-
-def set_pixel_hsv(x, y, h, s, v):
-    r, g, b = [int(x*255) for x in col.hsv_to_rgb(h, s, v)]
-    uh.set_pixel(x,y,r,g,b)
+t = 90
 
 while (t):
-    columns = t % 15
-    print(columns)
+    ccount = t % 15
+    print(ccount)
     mins, secs = divmod(t, 60)
     timeformat = '{:02d}:{:02d}'.format(mins, secs)
     print(timeformat, end='\r\n')
