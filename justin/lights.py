@@ -12,13 +12,16 @@ t = int(input("How many seconds? "))
 def dcounter(totaldots):
     width = math.ceil(totaldots/4)
     for x in range(width):
-        if (totaldots <= 4):
-            dots = totaldots
-        else:
+        if (totaldots > 4):
             dots = 4
-        for y in range(dots):
+        else:
+            dots = totaldots
+        for y in range(4):
             print(dots)
-            uh.set_pixel(x,y, 3, 130, 255)
+            if (y < dots):
+                uh.set_pixel(x,y, 3, 130, 255)
+            else:
+                uh.set_pixel(x,y, 0, 0, 0)
     uh.show()
     totaldots -= dots
 
