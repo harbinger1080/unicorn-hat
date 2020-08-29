@@ -18,7 +18,7 @@ mins, secs = divmod(t, 60)
 timeformat = '{:02d}:{:02d}'.format(mins, secs)
 
 while (t):
-    print(timeformat, end='\r\n')
+    print(timeformat, end='\r')
     time.sleep(1)
     t -= 1
     for y in range(height):
