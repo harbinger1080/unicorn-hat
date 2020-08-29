@@ -7,7 +7,7 @@ uh.rotation(0)
 uh.brightness(0.25)
 width,height=uh.get_shape()
 
-t = 90
+t = input("How many minutes?")
 
 while (t):
     dots = (t * 60)//225
