@@ -12,18 +12,18 @@ t = int(input("How many seconds? "))
 def dcounter(totaldots):
     width = math.ceil(totaldots/4)
     for x in range(width):
-        dots = math.ceil(totaldots - x * 4)
-        if (dots > 4):
+        if (totaldots > 4):
             dots = 4
         for y in range(dots):
             uh.set_pixel(x,y,3, 130, 255)
             uh.show()
+        totaldots -= dots
 
 
 while (t):
     mins, secs = divmod(t, 60)
     timeformat = '{:02d}:{:02d}'.format(mins, secs)
     print(timeformat, end='\r')
-    dcounter(t//25)
+    dcounter(t//15)
     time.sleep(1)
     t -= 1
