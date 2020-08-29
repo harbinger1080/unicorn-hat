@@ -17,7 +17,7 @@ def dcounter(totaldots):
         if (dots > 4):
             dots = 4
         for y in range(dots):
-            #print(x, y, end="\n")
+            print(x, y, end="\n")
             uh.set_pixel(x,y,3, 130, 255)
             uh.show()
 
