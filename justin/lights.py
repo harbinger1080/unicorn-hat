@@ -4,7 +4,7 @@ import unicornhat as uh
 
 uh.set_layout(uh.AUTO)
 uh.rotation(0)
-uh.brightness(0.1)
+uh.brightness(0.15)
 width,height=uh.get_shape()
 
 def set_pixel_hsv(x, y, h, s, v):
