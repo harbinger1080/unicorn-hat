@@ -12,6 +12,7 @@ t = 90
 
 while (t):
     dots = (t * 60) % 225
+    print (dots)
     mins, secs = divmod(t, 60)
 
     timeformat = '{:02d}:{:02d}'.format(mins, secs)
