@@ -11,7 +11,7 @@ columns = 0
 t = 90
 
 while (t):
-    dots = (t * 60) % 225
+    dots = (t * 60)/225
     print (dots)
     mins, secs = divmod(t, 60)
 
