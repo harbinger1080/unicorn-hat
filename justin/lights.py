@@ -16,6 +16,7 @@ def set_pixel_hsv(x, y, h, s, v):
 
 while (t):
     columns = t % 15
+    print(columns)
     mins, secs = divmod(t, 60)
     timeformat = '{:02d}:{:02d}'.format(mins, secs)
     print(timeformat, end='\r')
