@@ -16,10 +16,9 @@ while (t):
     timeformat = '{:02d}:{:02d}'.format(mins, secs)
     print(timeformat, end='\r')
 
-    for dot in range(dots):
-        for y in range(height):
-            for x in range(width):
-                uh.set_pixel(x,y,3, 130, 255)
-                uh.show()
-        time.sleep(1)
-        t -= 1
+    for y in range(height):
+        for x in range(dots//4):
+            uh.set_pixel(x,y,3, 130, 255)
+            uh.show()
+    time.sleep(1)
+    t -= 1
