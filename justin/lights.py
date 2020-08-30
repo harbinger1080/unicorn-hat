@@ -20,6 +20,7 @@ t = int(input("How many seconds? "))
 
 def dcounter(ldots):
     i = math.ceil(ldots)
+    print(i)
     while i > 0:
         for x in range(width):
             for y in range(height):
@@ -43,7 +44,7 @@ def set_pixel_hsv(x, y, h, s, v):
 while (t):
     mins, secs = divmod(t, 60)
     timeformat = '{:02d}:{:02d}'.format(mins, secs)
-    print(timeformat, end='\r')
+    #print(timeformat, end='\r')
     lights = t/dotst
     dcounter(lights)
     time.sleep(1)
