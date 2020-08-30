@@ -17,6 +17,7 @@ dotst = csec/4.0
 
 mins = 0
 secs = 0
+
 t = int(input("How many seconds? "))
 
 def dcounter(ldots):
@@ -43,6 +44,7 @@ def set_pixel_hsv(x, y, h, s, v):
     uh.set_pixel(x, y, r, g, b)
 
 while (t):
+    print(t)
     mins, secs = divmod(t, 60)
     timeformat = '{:02d}:{:02d}'.format(mins, secs)
     print(timeformat, end='\r')
