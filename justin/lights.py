@@ -32,8 +32,8 @@ while (t):
     timeformat = '{:02d}:{:02d}'.format(mins, secs)
     #print(timeformat, end='\r')
     lremaining = t//15
-    if (lremaining <= 1):
-        lremaining = 1
+    if (lremaining < 1):
+        lremaining = 0
     dcounter(lremaining)
 
     time.sleep(1)
