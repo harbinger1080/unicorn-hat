@@ -28,14 +28,14 @@ def dcounter(ldots):
         for x in range(width):
             for y in range(height):
                 if (i > 1):
-                    uh.set_pixel_hsv(x, y, .58, 1.0, 1.0)
+                    uh.set_pixel_hsv(x, y, .58, .5, 1.0)
                 elif (i == 1):
                     if (ldots % 1 == 0):
-                        sat = 1.0
+                        val = 1.0
                     else:    
-                        sat = round((ldots % 1.0), 3)
-                    print(sat)
-                    set_pixel_hsv(x, y, .58, sat, 1.0)
+                        val = round((ldots % 1.0), 3)
+                    #print(val)
+                    set_pixel_hsv(x, y, .58, 1.0, val)
                 else:
                     uh.set_pixel_hsv(x, y, 0.0, 0.0, 0.0)  
                 i -= 1
