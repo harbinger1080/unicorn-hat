@@ -10,10 +10,10 @@ width,height=uh.get_shape()
 
 mins = 0
 secs = 0
-t = int(input("How many minutes? "))
+t = int(input("How many seconds? "))
 
 def dcounter(ldots):
-    i = int(ldots)
+    i = math.ceil(ldots)
     while i > 0:
         for x in range(width):
             for y in range(height):
@@ -25,15 +25,12 @@ def dcounter(ldots):
     uh.show()
 
 while (t):
-    print(t)
+    #print(t)
     mins, secs = divmod(t, 60)
-    print(mins,secs)
+    #print(mins,secs)
     timeformat = '{:02d}:{:02d}'.format(mins, secs)
-    #print(timeformat, end='\r')
-    lights = t//15
-    if (lights < 1):
-        lights = 0
+    print(timeformat, end='\r')
+    lights = t/15
     dcounter(lights)
-
     time.sleep(1)
     t -= 1
