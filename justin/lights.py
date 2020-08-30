@@ -10,7 +10,6 @@ uh.brightness(0.25)
 mins = 0
 secs = 0
 t = int(input("How many minutes? "))
-t = t*60
 
 def dcounter(totaldots):
     print(totaldots)
@@ -36,5 +35,6 @@ while (t):
     if (lremaining <= 1):
         lremaining = 1
     dcounter(lremaining)
+
     time.sleep(1)
     t -= 1
