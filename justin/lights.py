@@ -15,7 +15,7 @@ def dcounter(totaldots):
     print(totaldots)
     width = math.ceil(totaldots/4)
     for x in range(width):
-        dots = round(totaldots/(x+1))
+        dots = round(totaldots/(x+1))-1
         for y in range(3):
             #print(x,y)
             if (y < dots):
