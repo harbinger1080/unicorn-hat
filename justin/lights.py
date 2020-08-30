@@ -27,9 +27,9 @@ def dcounter(totaldots):
     uh.show()
 
 while (t):
-    print(t)
+    #print(t)
     mins, secs = divmod(t, 60)
-    print(mins,secs)
+    #print(mins,secs)
     timeformat = '{:02d}:{:02d}'.format(mins, secs)
     print(timeformat, end='\r')
     lremaining = t//15
