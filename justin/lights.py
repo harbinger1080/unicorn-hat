@@ -2,15 +2,16 @@ import colorsys as col
 import unicornhat as uh
 import time
 import math
+from multiprocessing import process
 
 uh.set_layout(uh.AUTO)
 uh.rotation(0)
-uh.brightness(0.5)
+uh.brightness(0.25)
 width,height=uh.get_shape()
 
 #determine the scale of the timer
 #One column = X secs
-csec = 60.0
+csec = 450.0
 #each dot = X secs
 dotst = csec/4.0
 
@@ -41,13 +42,12 @@ def set_pixel_hsv(x, y, h, s, v):
     r, g, b = [int(c*255) for c in col.hsv_to_rgb(h, s, v)]
     uh.set_pixel(x, y, r, g, b)
 
-while (t):
-    mins, secs = divmod(t, 60)
-    secs, ms = divmod(secs, 1000)
-    timeformat = '{:02d}:{:02d}'.format(mins, secs)
-    #print(timeformat, end='\r')
-    time.sleep(.5)
-    lights = t/dotst
-    dcounter(lights)
-    time.sleep(.5)
-    t -= 1
+def timer(t):
+    while (t):
+        mins, secs = divmod(t, 60)
+        timeformat = '{:02d}:{:02d}'.format(mins, secs)
+        print(timeformat, end='\r')
+        lights = t/dotst
+        dcounter(lights)
+        time.sleep(1)
+        t -= 1
