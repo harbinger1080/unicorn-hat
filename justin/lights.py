@@ -2,7 +2,6 @@ import colorsys as col
 import unicornhat as uh
 import time
 import math
-from multiprocessing import process
 
 uh.set_layout(uh.AUTO)
 uh.rotation(0)
@@ -11,7 +10,7 @@ width,height=uh.get_shape()
 
 #determine the scale of the timer
 #One column = X secs
-csec = 450.0
+csec = 900.0
 #each dot = X secs
 dotst = csec/4.0
 
@@ -47,7 +46,7 @@ while (t):
     mins, secs = divmod(t, 60)
     #print(t, mins, secs)
     timeformat = '{:00d}:{:00d}'.format(mins, secs)
-    print(timeformat, end='\r')
+    print('\r', timeformat)
     lights = t/dotst
     dcounter(lights)
     time.sleep(1)
