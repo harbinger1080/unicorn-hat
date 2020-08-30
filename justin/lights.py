@@ -10,7 +10,7 @@ width,height=uh.get_shape()
 
 #determine the scale of the timer
 #One column = X secs
-csec = 450
+csec = int(input("How many secs per column? "))
 #each dot = X secs
 dotst = csec/4
 
