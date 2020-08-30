@@ -14,6 +14,8 @@ csec = 900.0
 #each dot = X secs
 dotst = csec/4.0
 
+t = 0
+hours = 0
 mins = 0
 secs = 0
 
