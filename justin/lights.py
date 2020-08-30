@@ -19,7 +19,7 @@ hours = 0
 mins = 0
 secs = 0
 
-t = int(input("How many minutes? ")*60)
+t = int(input("How many minutes? "))*60
 
 def dcounter(ldots):
     i = math.ceil(ldots)
@@ -47,7 +47,7 @@ def set_pixel_hsv(x, y, h, s, v):
 while (t):
     mins, secs = divmod(mins, 60)
     timeformat = '{:02d}:{:02d}'.format(mins, secs)
-    print('\r', timeformat)
+    #print('\r', timeformat)
     lights = t/dotst
     dcounter(lights)
     time.sleep(1)
