@@ -25,7 +25,8 @@ def dcounter(ldots):
             for y in range(height):
                 if (i > 0):
                     #uh.set_pixel(x, y, 0, 128, 255)
-                    set_pixel_hsv(x, y, 204, 1.0 - (ldots % 1), 1.0)
+                    sat = (1.0 - (1.0 / (ldots % 1)))
+                    set_pixel_hsv(x, y, 204, sat, 1.0)
                     i -= 1
                 else:
                     uh.set_pixel(x, y, 0, 0, 0)
