@@ -9,7 +9,8 @@ uh.brightness(0.25)
 
 mins = 0
 secs = 0
-t = int(input("How many minutes? ")*60)
+t = int(input("How many minutes? "))
+t = t*60
 
 def dcounter(totaldots):
     print(totaldots)
