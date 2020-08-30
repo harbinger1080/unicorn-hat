@@ -15,7 +15,7 @@ def dcounter(totaldots):
     for x in range(width):
         dots = round(totaldots/(x+1))
         for y in range(4):
-            print(x,y)
+            #print(x,y)
             if (y < dots):
                 uh.set_pixel(x,y, 3, 130, 255)
             else:
@@ -26,7 +26,7 @@ def dcounter(totaldots):
 while (t):
     mins, secs = divmod(t, 60)
     timeformat = '{:02d}:{:02d}'.format(mins, secs)
-    #print(timeformat, end='\r')
+    print(timeformat, end='\r')
     lremaining = t//15
     if (lremaining <= 1):
         lremaining = 1
