@@ -10,6 +10,7 @@ uh.brightness(0.25)
 t = int(input("How many seconds? "))
 
 def dcounter(totaldots):
+    print(totaldots)
     width = math.ceil(totaldots/4)
     for x in range(width):
         if (totaldots > 4):
