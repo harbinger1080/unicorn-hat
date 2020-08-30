@@ -7,6 +7,8 @@ uh.set_layout(uh.AUTO)
 uh.rotation(0)
 uh.brightness(0.25)
 
+mins = 0
+secs = 0
 t = int(input("How many seconds? "))
 
 def dcounter(totaldots):
