@@ -45,7 +45,8 @@ def set_pixel_hsv(x, y, h, s, v):
 
 while (t):
     mins, secs = divmod(t, 60)
-    print(t, mins, secs)
+    #print(t, mins, secs)
+    print('\n')
     timeformat = '{:03d}:{:02d}'.format(mins, secs)
     print(timeformat, end='\r')
     lights = t/dotst
