@@ -33,7 +33,7 @@ def dcounter(ldots):
                     if (ldots % 1 == 0):
                         sat = 1.0
                     else:    
-                        sat = (1.0 * (ldots % 1.0))
+                        sat = round((ldots % 1.0), 3)
                     print(sat)
                     set_pixel_hsv(x, y, .58, sat, 1.0)
                 else:
