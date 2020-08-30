@@ -10,9 +10,9 @@ width,height=uh.get_shape()
 
 #determine the scale of the timer
 #One column = X secs
-csec = 450.0
+csec = 450
 #each dot = X secs
-dotst = csec/4.0
+dotst = csec/4
 
 t = 0
 hours = 0
@@ -33,7 +33,8 @@ def dcounter(ldots):
                     if (ldots % 1 == 0):
                         sat = 1.0
                     else:    
-                        sat = (1.0 * (ldots % 1))
+                        sat = (1.0 * (ldots % 1.0))
+                    print(sat)
                     set_pixel_hsv(x, y, .58, sat, 1.0)
                 else:
                     uh.set_pixel_hsv(x, y, 0.0, 0.0, 0.0)  
@@ -43,6 +44,7 @@ def dcounter(ldots):
 def set_pixel_hsv(x, y, h, s, v):
     r, g, b = [int(c*255) for c in col.hsv_to_rgb(h, s, v)]
     uh.set_pixel(x, y, r, g, b)
+
 
 while (t):
     mins, secs = divmod(t, 60)
