@@ -17,7 +17,7 @@ dotst = csec/4.0
 mins = 0
 secs = 0
 
-t = int(input("How many seconds? "))
+t = int(input("How many minutes? ")*60)
 
 def dcounter(ldots):
     i = math.ceil(ldots)
@@ -43,11 +43,11 @@ def set_pixel_hsv(x, y, h, s, v):
     uh.set_pixel(x, y, r, g, b)
 
 while (t):
-    mins, secs = divmod(t, 60)
     hours, mins = divmod(t, 60)
-    secs, ms = divmod(t, 1000)
+    mins, secs = divmod(mins, 60)
+    secs, ms = divmod(secs, 1000)
     #print(t, mins, secs)
-    timeformat = '{:02d}:{:02d}:{:02d}.{:4d}'.format(hours, mins, secs, ms)
+    timeformat = '{:02d}:{:02d}:{:02d}.{:d}'.format(hours, mins, secs, ms)
     print('\r', timeformat)
     lights = t/dotst
     dcounter(lights)
