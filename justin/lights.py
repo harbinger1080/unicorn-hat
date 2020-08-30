@@ -10,7 +10,7 @@ width,height=uh.get_shape()
 
 #determine the scale of the timer
 #One column = X secs
-csec = 900.0
+csec = 450.0
 #each dot = X secs
 dotst = csec/4.0
 
@@ -23,7 +23,7 @@ t = int(input("How many minutes? "))*60
 
 def dcounter(ldots):
     i = math.ceil(ldots)
-    print(i)
+    #print(i)
     while i > 0:
         for x in range(width):
             for y in range(height):
@@ -47,7 +47,7 @@ def set_pixel_hsv(x, y, h, s, v):
 while (t):
     mins, secs = divmod(mins, 60)
     timeformat = '{:02d}:{:02d}'.format(mins, secs)
-    #print('\r', timeformat)
+    print('\r', timeformat)
     lights = t/dotst
     dcounter(lights)
     time.sleep(1)
