@@ -23,13 +23,15 @@ def dcounter(ldots):
     while i > 0:
         for x in range(width):
             for y in range(height):
-                if (i > 0):
+                if (i == 1):
                     if (ldots % 1 == 0):
                         sat = 1.0
                     else:    
                         sat = (1.0 * (ldots % 1))
                     i -= 1
                     set_pixel_hsv(x, y, .58, sat, 1.0)
+                if (i > 1):
+                    uh.set_pixel_hsv(x, y, .58, 1.0, 1.0)
                 else:
                     uh.set_pixel(x, y, 0, 0, 0)
     uh.show()
