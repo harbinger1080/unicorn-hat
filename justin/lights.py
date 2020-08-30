@@ -28,8 +28,8 @@ def dcounter(ldots):
                     if (ldots % 1 == 0):
                         sat = 1.0
                     else:    
-                        sat = (1.0 - (1.0 / (ldots % 1)))
-                    set_pixel_hsv(x, y, 204, sat, 1.0)
+                        sat = (1.0 * (ldots % 1))
+                    set_pixel_hsv(x, y, .58, sat, 1.0)
                     i -= 1
                 else:
                     uh.set_pixel(x, y, 0, 0, 0)
