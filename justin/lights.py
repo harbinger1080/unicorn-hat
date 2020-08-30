@@ -16,7 +16,7 @@ def dcounter(totaldots):
     width = math.ceil(totaldots/4)
     for x in range(width):
         dots = round(totaldots/(x+1))
-        for y in range(4):
+        for y in range(3):
             #print(x,y)
             if (y < dots):
                 uh.set_pixel(x,y, 3, 130, 255)
