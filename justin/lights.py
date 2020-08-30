@@ -32,8 +32,8 @@ def dcounter(ldots):
                 if (i > 1):
                     uh.set_pixel_hsv(x, y, .58, 1.0, 1.0)
                 else:
-                    uh.set_pixel(x, y, 0, 0, 0)
-                i -= 1    
+                    uh.set_pixel_hsv(x, y, 0.0, 0.0, 0.0)  
+                t -= 1
     uh.show()
 
 def set_pixel_hsv(x, y, h, s, v):
