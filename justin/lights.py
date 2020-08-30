@@ -24,25 +24,22 @@ def dcounter(ldots):
         for x in range(width):
             for y in range(height):
                 if (i > 0):
-                    #uh.set_pixel(x, y, 0, 128, 255)
                     if (ldots % 1 == 0):
                         sat = 1.0
                     else:    
                         sat = (1.0 * (ldots % 1))
-                    set_pixel_hsv(x, y, .58, sat, 1.0)
                     i -= 1
+                    set_pixel_hsv(x, y, .58, sat, 1.0)
                 else:
                     uh.set_pixel(x, y, 0, 0, 0)
     uh.show()
 
 def set_pixel_hsv(x, y, h, s, v):
-    r, g, b = [int(c*255) for c in col.hsv_to_rgb(h,s,v)]
-    uh.set_pixel_hsv(x,y,r,g,b)
+    r, g, b = [int(c*255) for c in col.hsv_to_rgb(h, s, v)]
+    uh.set_pixel_hsv(x, y, r, g, b)
 
 while (t):
-    #print(t)
     mins, secs = divmod(t, 60)
-    #print(mins,secs)
     timeformat = '{:02d}:{:02d}'.format(mins, secs)
     print(timeformat, end='\r')
     lights = t/dotst
