@@ -5,14 +5,14 @@ import math
 
 uh.set_layout(uh.AUTO)
 uh.rotation(0)
-uh.brightness(0.25)
+uh.brightness(0.5)
 width,height=uh.get_shape()
 
 #determine the scale of the timer
 #One column = X secs
-csec = 60
+csec = 60.0
 #each dot = X secs
-dotst = csec/4
+dotst = csec/4.0
 
 mins = 0
 secs = 0
@@ -43,9 +43,11 @@ def set_pixel_hsv(x, y, h, s, v):
 
 while (t):
     mins, secs = divmod(t, 60)
+    secs, ms = divmod(secs, 1000)
     timeformat = '{:02d}:{:02d}'.format(mins, secs)
     #print(timeformat, end='\r')
+    time.sleep(.5)
     lights = t/dotst
     dcounter(lights)
-    time.sleep(1)
+    time.sleep(.5)
     t -= 1
